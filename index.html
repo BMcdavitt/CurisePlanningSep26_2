@@ -6,10 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mediterranean Cruise Guide — Odyssey of the Seas, September 2025</title>
   <style>
+    /* ── Reset & base ─────────────────────────────────────────── */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+    }
+
+    html {
+      overflow-x: hidden;
     }
 
     body {
@@ -18,23 +23,42 @@
       color: #1a1a1a;
       background: #fff;
       line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
     }
 
-    /* Cover */
+    p {
+      margin-bottom: 10px;
+      word-break: break-word;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ── CSS custom properties for padding (keeps header bleed in sync) ── */
+    :root {
+      --page-px: 64px;
+      --page-py: 48px;
+    }
+
+    /* ── Cover ────────────────────────────────────────────────── */
     .cover {
+      min-height: 100svh;
       min-height: 100vh;
       background: linear-gradient(160deg, #1a3a5c 0%, #2e6da4 55%, #1a3a5c 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 60px 40px;
+      padding: 60px clamp(20px, 6vw, 60px);
       text-align: center;
       color: white;
     }
 
     .cover-ship {
-      font-size: 10pt;
+      font-size: clamp(8pt, 2vw, 10pt);
       letter-spacing: 3px;
       text-transform: uppercase;
       opacity: 0.75;
@@ -42,20 +66,20 @@
     }
 
     .cover-title {
-      font-size: 36pt;
+      font-size: clamp(22pt, 6vw, 36pt);
       font-weight: bold;
       line-height: 1.2;
       margin-bottom: 16px;
     }
 
     .cover-subtitle {
-      font-size: 14pt;
+      font-size: clamp(11pt, 3vw, 14pt);
       opacity: 0.9;
       margin-bottom: 10px;
     }
 
     .cover-tagline {
-      font-size: 11pt;
+      font-size: clamp(9.5pt, 2.5vw, 11pt);
       opacity: 0.7;
       font-style: italic;
       margin-bottom: 36px;
@@ -69,17 +93,17 @@
     }
 
     .cover-meta {
-      font-size: 10pt;
+      font-size: clamp(9pt, 2vw, 10pt);
       opacity: 0.7;
       letter-spacing: 1px;
       line-height: 2.2;
     }
 
-    /* TOC */
+    /* ── TOC ──────────────────────────────────────────────────── */
     .toc {
       background: #f4f7fb;
       border-left: 4px solid #2e6da4;
-      padding: 32px 48px;
+      padding: 32px clamp(20px, 5vw, 48px);
       page-break-after: always;
     }
 
@@ -101,11 +125,13 @@
     }
 
     .toc li {
-      padding: 6px 0;
+      padding: 8px 0;
       border-bottom: 1px dotted #ccd;
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+      flex-wrap: wrap;
+      gap: 2px 12px;
     }
 
     .toc li a {
@@ -114,15 +140,15 @@
       font-size: 10.5pt;
     }
 
-    .toc li a:hover {
+    .toc li a:hover,
+    .toc li a:focus {
       text-decoration: underline;
     }
 
     .toc-date {
       color: #888;
-      font-size: 9.5pt;
+      font-size: 9pt;
       white-space: nowrap;
-      margin-left: 12px;
     }
 
     .toc-note {
@@ -132,19 +158,19 @@
       font-style: italic;
     }
 
-    /* Page */
+    /* ── Page wrapper ─────────────────────────────────────────── */
     .page {
-      padding: 48px 64px;
+      padding: var(--page-py) var(--page-px);
       max-width: 900px;
       margin: 0 auto;
     }
 
-    /* Port headers */
+    /* ── Port section headers ─────────────────────────────────── */
     .port-header {
       background: linear-gradient(90deg, #1a3a5c, #2e6da4);
       color: white;
-      padding: 28px 40px;
-      margin: -48px -64px 36px -64px;
+      padding: 28px clamp(20px, 5vw, 40px);
+      margin: calc(-1 * var(--page-py)) calc(-1 * var(--page-px)) 36px calc(-1 * var(--page-px));
       page-break-before: always;
     }
 
@@ -157,20 +183,20 @@
     }
 
     .port-title {
-      font-size: 24pt;
+      font-size: clamp(18pt, 4vw, 24pt);
       font-weight: bold;
       margin-bottom: 4px;
     }
 
     .port-meta {
-      font-size: 10pt;
+      font-size: clamp(9pt, 2vw, 10pt);
       opacity: 0.85;
     }
 
-    /* Quick-info bar */
+    /* ── Info bar ─────────────────────────────────────────────── */
     .info-bar {
       display: flex;
-      gap: 0;
+      flex-wrap: wrap;
       margin-bottom: 32px;
       border: 1px solid #d0dce8;
       border-radius: 4px;
@@ -178,14 +204,21 @@
     }
 
     .info-item {
-      flex: 1;
+      flex: 1 1 120px;
       padding: 12px 16px;
       background: #f4f7fb;
       border-right: 1px solid #d0dce8;
+      border-bottom: 1px solid #d0dce8;
     }
 
+    /* Remove right border on items that wrap to a new row's last slot */
     .info-item:last-child {
       border-right: none;
+    }
+
+    /* Remove bottom borders from the last row of items (works for 2- and 4-col layouts) */
+    .info-bar .info-item:nth-last-child(-n+2) {
+      border-bottom: none;
     }
 
     .info-label {
@@ -202,9 +235,9 @@
       color: #1a3a5c;
     }
 
-    /* Section headings */
+    /* ── Headings ─────────────────────────────────────────────── */
     h2 {
-      font-size: 13pt;
+      font-size: clamp(11.5pt, 2.5vw, 13pt);
       color: #1a3a5c;
       border-bottom: 2px solid #2e6da4;
       padding-bottom: 6px;
@@ -213,17 +246,13 @@
     }
 
     h3 {
-      font-size: 11pt;
+      font-size: clamp(10.5pt, 2.2vw, 11pt);
       font-weight: bold;
       color: #1a3a5c;
       margin: 20px 0 6px 0;
     }
 
-    p {
-      margin-bottom: 10px;
-    }
-
-    /* Option cards */
+    /* ── Option cards ─────────────────────────────────────────── */
     .option {
       background: #fafbfd;
       border: 1px solid #dde4f0;
@@ -243,6 +272,10 @@
 
     .option-body {
       padding: 14px 18px 0 18px;
+    }
+
+    .option-body--no-img {
+      padding-top: 14px;
     }
 
     .option-tag {
@@ -292,7 +325,7 @@
     }
 
     .option-title {
-      font-size: 12pt;
+      font-size: clamp(11pt, 2.5vw, 12pt);
       font-weight: bold;
       color: #1a3a5c;
       margin-bottom: 6px;
@@ -305,12 +338,12 @@
     }
 
     .option-desc {
-      font-size: 10.5pt;
+      font-size: clamp(10pt, 2vw, 10.5pt);
       margin-bottom: 8px;
     }
 
     .option-verdict {
-      font-size: 9.5pt;
+      font-size: clamp(9pt, 1.8vw, 9.5pt);
       color: #555;
       font-style: italic;
       border-top: 1px solid #eee;
@@ -318,7 +351,15 @@
       margin-top: 6px;
     }
 
-    /* Decision box */
+    /* ── Option grid ──────────────────────────────────────────── */
+    .option-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+
+    /* ── Decision box ─────────────────────────────────────────── */
     .decide-box {
       background: #fffbe8;
       border: 1.5px solid #e0c840;
@@ -343,7 +384,7 @@
       font-size: 10.5pt;
     }
 
-    /* Callout boxes */
+    /* ── Callout boxes ────────────────────────────────────────── */
     .callout {
       padding: 14px 18px;
       border-radius: 4px;
@@ -395,20 +436,7 @@
       color: #a06010;
     }
 
-    /* Two-column option grid on wider screens */
-    .option-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-bottom: 4px;
-    }
-
-    @media (max-width: 700px) {
-      .option-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
+    /* ── Misc ─────────────────────────────────────────────────── */
     hr.section-break {
       border: none;
       border-top: 1px solid #dde4f0;
@@ -417,12 +445,142 @@
 
     .doc-footer {
       text-align: center;
-      padding: 32px;
+      padding: 32px clamp(16px, 4vw, 32px);
       color: #aaa;
       font-size: 9pt;
       border-top: 1px solid #eee;
       margin-top: 48px;
       font-style: italic;
+    }
+
+    /* ── Tablet: 2-col grid → 1-col, shrink padding ──────────── */
+    @media (max-width: 768px) {
+      :root {
+        --page-px: 32px;
+        --page-py: 36px;
+      }
+
+      .option-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .toc {
+        padding: 24px 32px;
+      }
+    }
+
+    /* ── Mobile: single-column, smaller type, compact spacing ── */
+    @media (max-width: 480px) {
+      :root {
+        --page-px: 16px;
+        --page-py: 20px;
+      }
+
+      body {
+        font-size: 10pt;
+      }
+
+      /* Cover */
+      .cover {
+        padding: 48px 20px;
+      }
+
+      .cover-divider {
+        margin: 16px auto;
+      }
+
+      .cover-tagline {
+        margin-bottom: 24px;
+      }
+
+      /* TOC */
+      .toc {
+        padding: 20px 16px;
+      }
+
+      .toc li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1px;
+      }
+
+      .toc-date {
+        margin-left: 0;
+      }
+
+      /* Info bar: 2×2 on mobile */
+      .info-bar {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+      }
+
+      .info-item {
+        flex: 1 1 45%;
+      }
+
+      /* Remove bottom border from last two items */
+      .info-bar .info-item:nth-last-child(-n+2) {
+        border-bottom: none;
+      }
+
+      /* Keep only the odd items' right border visible in 2-col layout */
+      .info-bar .info-item:nth-child(even) {
+        border-right: none;
+      }
+
+      /* Option cards */
+      .option-img {
+        height: 160px;
+      }
+
+      .option-body {
+        padding: 12px 14px 0 14px;
+      }
+
+      .option-body--no-img {
+        padding-top: 12px;
+      }
+
+      /* Callouts and decision box */
+      .callout {
+        padding: 12px 14px;
+        font-size: 10pt;
+      }
+
+      .decide-box {
+        padding: 14px 14px;
+      }
+
+      .decide-box li {
+        font-size: 10pt;
+      }
+
+      .decide-box ul {
+        padding-left: 16px;
+      }
+
+      /* Footer */
+      .doc-footer {
+        margin-top: 32px;
+      }
+    }
+
+    /* ── Print tweaks (unchanged behavior) ───────────────────── */
+    @media print {
+      :root {
+        --page-px: 32px;
+        --page-py: 24px;
+      }
+
+      .cover {
+        min-height: 0;
+        padding: 60px 40px;
+      }
+
+      .option-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   </style>
 </head>
@@ -580,7 +738,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Perissa_1.jpg?width=700"
             alt="Perissa black sand beach, Santorini" onerror="this.style.display='none'">
           <span class="option-tag tag-beach">Beach</span>
@@ -595,7 +753,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Santo_Wines_Santorini.jpg?width=700"
             alt="Santorini wine tasting" onerror="this.style.display='none'">
@@ -616,7 +774,7 @@
 
     <div class="option-grid">
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Metaxi Mas — Exo Gonia village</div>
           <p class="option-desc">Where Santorini locals eat on special occasions. Off the cruise circuit entirely.
@@ -626,7 +784,7 @@
         </div>
       </div>
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Taverna in Pyrgos or Megalochori</div>
           <p class="option-desc">These inland villages are almost entirely skipped by cruise tourists. Any of the small
@@ -758,7 +916,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Artemis_Ephesus.png?width=700"
             alt="Temple of Artemis, Ephesus" onerror="this.style.display='none'">
@@ -774,7 +932,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Kusadasi_Ladies_Beach.jpg?width=700"
             alt="Ladies Beach, Kusadasi" onerror="this.style.display='none'">
@@ -790,7 +948,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/14.30_Celsus_Library_in_Ephesus.JPG?width=700"
             alt="Ephesus ruins with visitors" onerror="this.style.display='none'">
@@ -810,7 +968,7 @@
     <h2>Where to Eat</h2>
     <div class="option-grid">
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Kazim Usta — Fishermen's Harbor</div>
           <p class="option-desc">Family-run since the 1970s, open since before Kusadasi was a cruise port. Fresh fish,
@@ -819,7 +977,7 @@
         </div>
       </div>
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Lunch near Ephesus (Selçuk town)</div>
           <p class="option-desc">Selçuk, the small town adjacent to the ruins, has a cluster of no-nonsense Turkish
@@ -951,7 +1109,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Athens_Piraeus_Mykonos_Palace_ship.jpg?width=700"
             alt="Boat departing Mykonos" onerror="this.style.display='none'">
@@ -967,7 +1125,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Greek_Village_Bakery_03.jpg?width=700"
             alt="Greek bakery and street food" onerror="this.style.display='none'">
@@ -984,7 +1142,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Mykonos_,Windmills.jpg?width=700"
             alt="Mykonos harbour and town" onerror="this.style.display='none'">
@@ -1004,7 +1162,7 @@
     <h2>Where to Eat</h2>
     <div class="option-grid">
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Nikos Taverna — Old Harbor</div>
           <p class="option-desc">On the harbor waterfront, established 1979, same family. Grilled octopus, fresh catch
@@ -1013,7 +1171,7 @@
         </div>
       </div>
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <span class="option-tag tag-food">Casual</span>
           <div class="option-title">Street Food in Chora</div>
           <p class="option-desc">Gyro or souvlaki pita €4–7. Bakeries sell tiropita and spanakopita for €2–3.
@@ -1152,7 +1310,7 @@
     <div class="option-grid">
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Grotto_Capri_Inside.jpg?width=700"
             alt="Inside the Blue Grotto, Capri" onerror="this.style.display='none'">
@@ -1170,7 +1328,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Immagine_d%27insieme_2,_Cappella_Sansevero.jpg?width=700"
             alt="Cappella Sansevero, Naples" onerror="this.style.display='none'">
@@ -1187,7 +1345,7 @@
       </div>
 
       <div class="option">
-        <div class="option-body" style="padding-top:14px;">
+        <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Punch_Neapolitan_Pizza_Margherita.jpg?width=700"
             alt="Neapolitan pizza Margherita" onerror="this.style.display='none'">
