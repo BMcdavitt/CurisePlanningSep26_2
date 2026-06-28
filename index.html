@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mediterranean Cruise Guide — Odyssey of the Seas, September 2025</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 11pt;
+      color: #1a1a1a;
+      background: #fff;
+      line-height: 1.65;
+    }
+
+    /* Cover */
+    .cover {
+      min-height: 100vh;
+      background: linear-gradient(160deg, #1a3a5c 0%, #2e6da4 55%, #1a3a5c 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      text-align: center;
+      color: white;
+    }
+
+    .cover-ship {
+      font-size: 10pt;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.75;
+      margin-bottom: 16px;
+    }
+
+    .cover-title {
+      font-size: 36pt;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .cover-subtitle {
+      font-size: 14pt;
+      opacity: 0.9;
+      margin-bottom: 10px;
+    }
+
+    .cover-tagline {
+      font-size: 11pt;
+      opacity: 0.7;
+      font-style: italic;
+      margin-bottom: 36px;
+    }
+
+    .cover-divider {
+      width: 80px;
+      height: 2px;
+      background: rgba(255, 255, 255, 0.35);
+      margin: 24px auto;
+    }
+
+    .cover-meta {
+      font-size: 10pt;
+      opacity: 0.7;
+      letter-spacing: 1px;
+      line-height: 2.2;
+    }
+
+    /* TOC */
+    .toc {
+      background: #f4f7fb;
+      border-left: 4px solid #2e6da4;
+      padding: 32px 48px;
+      page-break-after: always;
+    }
+
+    .toc-inner {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .toc h2 {
+      font-size: 13pt;
+      color: #1a3a5c;
+      margin-bottom: 20px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .toc ul {
+      list-style: none;
+    }
+
+    .toc li {
+      padding: 6px 0;
+      border-bottom: 1px dotted #ccd;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .toc li a {
+      color: #2e6da4;
+      text-decoration: none;
+      font-size: 10.5pt;
+    }
+
+    .toc li a:hover {
+      text-decoration: underline;
+    }
+
+    .toc-date {
+      color: #888;
+      font-size: 9.5pt;
+      white-space: nowrap;
+      margin-left: 12px;
+    }
+
+    .toc-note {
+      margin-top: 20px;
+      font-size: 9.5pt;
+      color: #666;
+      font-style: italic;
+    }
+
+    /* Page */
+    .page {
+      padding: 48px 64px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Port headers */
+    .port-header {
+      background: linear-gradient(90deg, #1a3a5c, #2e6da4);
+      color: white;
+      padding: 28px 40px;
+      margin: -48px -64px 36px -64px;
+      page-break-before: always;
+    }
+
+    .port-badge {
+      font-size: 9pt;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 6px;
+    }
+
+    .port-title {
+      font-size: 24pt;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .port-meta {
+      font-size: 10pt;
+      opacity: 0.85;
+    }
+
+    /* Quick-info bar */
+    .info-bar {
+      display: flex;
+      gap: 0;
+      margin-bottom: 32px;
+      border: 1px solid #d0dce8;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .info-item {
+      flex: 1;
+      padding: 12px 16px;
+      background: #f4f7fb;
+      border-right: 1px solid #d0dce8;
+    }
+
+    .info-item:last-child {
+      border-right: none;
+    }
+
+    .info-label {
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 2px;
+    }
+
+    .info-value {
+      font-size: 10.5pt;
+      font-weight: bold;
+      color: #1a3a5c;
+    }
+
+    /* Section headings */
+    h2 {
+      font-size: 13pt;
+      color: #1a3a5c;
+      border-bottom: 2px solid #2e6da4;
+      padding-bottom: 6px;
+      margin: 28px 0 14px 0;
+      letter-spacing: 0.5px;
+    }
+
+    h3 {
+      font-size: 11pt;
+      font-weight: bold;
+      color: #1a3a5c;
+      margin: 20px 0 6px 0;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    /* Option cards */
+    .option {
+      background: #fafbfd;
+      border: 1px solid #dde4f0;
+      border-radius: 4px;
+      padding: 0 0 14px 0;
+      margin-bottom: 14px;
+      overflow: hidden;
+    }
+
+    .option-img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      background: #e4eaf4;
+    }
+
+    .option-body {
+      padding: 14px 18px 0 18px;
+    }
+
+    .option-tag {
+      display: inline-block;
+      font-size: 8pt;
+      font-weight: bold;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 2px;
+      margin-bottom: 6px;
+    }
+
+    .tag-history {
+      background: #e0ecff;
+      color: #1a4a8a;
+    }
+
+    .tag-beach {
+      background: #d6f0e8;
+      color: #1a6644;
+    }
+
+    .tag-food {
+      background: #fef0d8;
+      color: #8a4a00;
+    }
+
+    .tag-walk {
+      background: #f0e8ff;
+      color: #5a1a8a;
+    }
+
+    .tag-boat {
+      background: #d8f0f8;
+      color: #0a5a78;
+    }
+
+    .tag-culture {
+      background: #fde8e8;
+      color: #8a1a1a;
+    }
+
+    .tag-halfday {
+      background: #e8f4d8;
+      color: #3a5a1a;
+    }
+
+    .option-title {
+      font-size: 12pt;
+      font-weight: bold;
+      color: #1a3a5c;
+      margin-bottom: 6px;
+    }
+
+    .option-time {
+      font-size: 9pt;
+      color: #888;
+      margin-bottom: 8px;
+    }
+
+    .option-desc {
+      font-size: 10.5pt;
+      margin-bottom: 8px;
+    }
+
+    .option-verdict {
+      font-size: 9.5pt;
+      color: #555;
+      font-style: italic;
+      border-top: 1px solid #eee;
+      padding-top: 8px;
+      margin-top: 6px;
+    }
+
+    /* Decision box */
+    .decide-box {
+      background: #fffbe8;
+      border: 1.5px solid #e0c840;
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .decide-box h3 {
+      color: #7a5800;
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 11pt;
+    }
+
+    .decide-box ul {
+      padding-left: 20px;
+    }
+
+    .decide-box li {
+      margin-bottom: 6px;
+      font-size: 10.5pt;
+    }
+
+    /* Callout boxes */
+    .callout {
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin: 16px 0;
+      font-size: 10.5pt;
+    }
+
+    .callout-tip {
+      background: #e8f4ec;
+      border-left: 4px solid #3a9a5c;
+    }
+
+    .callout-warn {
+      background: #fff4e0;
+      border-left: 4px solid #e0972a;
+    }
+
+    .callout-scam {
+      background: #fdecea;
+      border-left: 4px solid #d94040;
+    }
+
+    .callout-food {
+      background: #fef6e8;
+      border-left: 4px solid #d4820a;
+    }
+
+    .callout-label {
+      font-size: 8.5pt;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+
+    .callout-tip .callout-label {
+      color: #2a7a44;
+    }
+
+    .callout-warn .callout-label {
+      color: #a06810;
+    }
+
+    .callout-scam .callout-label {
+      color: #b03030;
+    }
+
+    .callout-food .callout-label {
+      color: #a06010;
+    }
+
+    /* Two-column option grid on wider screens */
+    .option-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 4px;
+    }
+
+    @media (max-width: 700px) {
+      .option-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    hr.section-break {
+      border: none;
+      border-top: 1px solid #dde4f0;
+      margin: 28px 0;
+    }
+
+    .doc-footer {
+      text-align: center;
+      padding: 32px;
+      color: #aaa;
+      font-size: 9pt;
+      border-top: 1px solid #eee;
+      margin-top: 48px;
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="cover-ship">Royal Caribbean · Odyssey of the Seas</div>
+    <div class="cover-title">Mediterranean<br>Port Planning Guide</div>
+    <div class="cover-subtitle">4 adults · September 2025</div>
+    <div class="cover-tagline">Options, tradeoffs, and decisions to make together</div>
+    <div class="cover-divider"></div>
+    <div class="cover-meta">
+      Sep 22 · Santorini, Greece<br>
+      Sep 23 · Ephesus / Kusadasi, Turkey<br>
+      Sep 24 · Mykonos, Greece<br>
+      Sep 26 · Naples / Capri, Italy
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <div class="toc-inner">
+      <h2>Contents</h2>
+      <ul>
+        <li><a href="#santorini">Santorini, Greece</a><span class="toc-date">Tender · Sep 22 · 10am–11pm</span></li>
+        <li><a href="#ephesus">Ephesus / Kusadasi, Turkey</a><span class="toc-date">Docked · Sep 23 · 9am–7pm</span>
+        </li>
+        <li><a href="#mykonos">Mykonos, Greece</a><span class="toc-date">Tender · Sep 24 · 7am–5pm</span></li>
+        <li><a href="#naples">Naples / Capri, Italy</a><span class="toc-date">Docked · Sep 26 · 7am–6pm</span></li>
+        <li><a href="#tips">Practical Tips &amp; Notes</a></li>
+      </ul>
+      <p class="toc-note">Each port section has a "Decisions to Make" box — those are the key conversation starters for
+        your group planning session.</p>
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- SANTORINI                                                     -->
+  <!-- ============================================================ -->
+  <div class="page" id="santorini">
+    <div class="port-header">
+      <div class="port-badge">Greece · Sep 22 · Tendered Port</div>
+      <div class="port-title">Santorini</div>
+      <div class="port-meta">Tender window: 10:00am – 11:00pm &nbsp;·&nbsp; Last tender back ~10:00pm (verify with ship)
+      </div>
+    </div>
+
+    <div class="info-bar">
+      <div class="info-item">
+        <div class="info-label">Port Type</div>
+        <div class="info-value">Tender (small boats)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Time Ashore</div>
+        <div class="info-value">~13 hours</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Currency</div>
+        <div class="info-value">Euro (€)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Sunset</div>
+        <div class="info-value">~7:15pm</div>
+      </div>
+    </div>
+
+    <h2>Getting Ashore</h2>
+    <p>The ship anchors in the caldera and tenders passengers to the <strong>Old Port (Skala)</strong> at the base of
+      the cliff. From there, three options to reach Fira (main town at the top): <strong>cable car</strong> (€10/person,
+      5 min, best option), <strong>walking up 588 steps</strong> (15–20 min, steep), or <strong>donkey ride</strong>
+      (skip it — slow and ethically questionable). Lines build quickly after 10am. With a 10am tender start, grab an
+      early boat and go.</p>
+    <p><strong>Getting around the island:</strong> Buses are cheap (€1.80/ride) from the main KTEL station in Fira and
+      reach most destinations. Taxis are available at fixed posted rates. ATV rentals are popular but roads are narrow
+      and accidents are common — know that going in.</p>
+
+    <div class="callout callout-tip">
+      <div class="callout-label">The Big Advantage Today</div>
+      A 10pm return is unusual — most cruise ships leave Santorini by late afternoon. That means you can do activities
+      during the day AND come back for the sunset (around 7:15pm), which most cruise passengers miss entirely. Build
+      your day around that.
+    </div>
+
+    <h2>Your Options</h2>
+
+    <div class="option-grid">
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Oia_Santorini_Blue_Domes.jpg?width=700"
+          alt="Oia, Santorini" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-walk">Walk / Explore</span>
+          <div class="option-title">Fira to Oia Cliff Hike</div>
+          <div class="option-time">⏱ 3–4 hrs · Full morning</div>
+          <p class="option-desc">10km trail along the caldera rim from Fira through Imerovigli to Oia, with unobstructed
+            views the whole way. Ends in Oia where you can explore, eat, and grab a taxi or bus back. One of the best
+            walks in the Mediterranean.</p>
+          <p class="option-verdict">Best for: people who want to earn the views. Not right for anyone with knee issues
+            or heat sensitivity — September is still warm. Can be shortened by starting in Imerovigli instead.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Blue-dome-Santorini.JPG?width=700"
+          alt="Oia village, Santorini" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-walk">Village</span>
+          <div class="option-title">Oia Village (Taxi / Bus)</div>
+          <div class="option-time">⏱ 2–3 hrs · Any time of day</div>
+          <p class="option-desc">Skip the hike and go straight to Oia by taxi (~€25 from Fira) or bus (€1.80). The
+            iconic blue-domed churches, narrow marble alleys, and caldera views are all here. Most beautiful early
+            morning or late afternoon when tour groups thin out.</p>
+          <p class="option-verdict">Best for: people who want the Santorini postcard without the 3-hour hike. Pairs well
+            with a late lunch and the sunset.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Akrotiri_Thera.jpg?width=700"
+          alt="Akrotiri ruins, Santorini" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-history">History</span>
+          <div class="option-title">Akrotiri Ruins + Red Beach</div>
+          <div class="option-time">⏱ 2.5–3 hrs total · Morning or early afternoon</div>
+          <p class="option-desc">Akrotiri is a Minoan Bronze Age city buried by Santorini's volcanic eruption —
+            3,500-year-old preserved streets, frescoes, and buildings, all covered and shaded. Entry ~€12. Red Beach is
+            a 10-minute walk: dramatic red-and-black volcanic cliffs over dark sand. About 25 min from Fira by bus or
+            taxi.</p>
+          <p class="option-verdict">Best for: history lovers. The ruins are genuinely impressive and less crowded than
+            Oia. Red Beach is photogenic but not great for swimming. Can do this in the morning and still make it back
+            for sunset.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Santorini_caldera_view.jpg?width=700"
+          alt="Santorini caldera from the water" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-boat">Boat</span>
+          <div class="option-title">Caldera Sunset Sailing</div>
+          <div class="option-time">⏱ 3–4 hrs · Departs ~3:30–4pm</div>
+          <p class="option-desc">Catamaran tours circle the caldera, stop at the volcanic hot springs, and are back by
+            7:30–8pm. Dinner and wine usually included. ~€80–100/person. You watch the sunset from the water looking
+            back at the cliff — far better than fighting crowds at Oia's viewpoint.</p>
+          <p class="option-verdict">Best for: everyone, honestly. This is the one activity that uses your late return
+            window most effectively. <strong>Book in advance</strong> — sells out weeks ahead. Book direct with a local
+            operator, not through the ship.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Perissa_1.jpg?width=700"
+            alt="Perissa black sand beach, Santorini" onerror="this.style.display='none'">
+          <span class="option-tag tag-beach">Beach</span>
+          <div class="option-title">Black Sand Beach (Perissa or Kamari)</div>
+          <div class="option-time">⏱ 2–3 hrs · Afternoon</div>
+          <p class="option-desc">Santorini's beaches are black volcanic sand — unique and striking. Perissa and Kamari
+            are the main ones, both about 30 min from Fira by bus. Loungers, tavernas, warm water in September. Nothing
+            fancy, but genuinely enjoyable.</p>
+          <p class="option-verdict">Best for: people who want beach time without the Mykonos scene. Good afternoon
+            option if you've done Oia/Akrotiri in the morning. September water temperature ~24°C.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Santo_Wines_Santorini.jpg?width=700"
+            alt="Santorini wine tasting" onerror="this.style.display='none'">
+          <span class="option-tag tag-food">Wine</span>
+          <div class="option-title">Santorini Wine Tasting</div>
+          <div class="option-time">⏱ 1.5–2 hrs · Flexible</div>
+          <p class="option-desc">Santorini's volcanic soil produces distinctive Assyrtiko white wine — dry, mineral,
+            high acid. Estate Argyros and Santo Wines (cliff-top views, pricier) are the top two. A tasting with 4–5
+            wines runs €20–35/person. Most estates are in the southern part of the island near Akrotiri.</p>
+          <p class="option-verdict">Best for: wine drinkers. Easy to combine with Akrotiri. Santo Wines has the best
+            view but most tourist traffic; Argyros is more serious about the wine.</p>
+        </div>
+      </div>
+
+    </div><!-- end option-grid -->
+
+    <h2>Where to Eat</h2>
+
+    <div class="option-grid">
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <span class="option-tag tag-food">Restaurant</span>
+          <div class="option-title">Metaxi Mas — Exo Gonia village</div>
+          <p class="option-desc">Where Santorini locals eat on special occasions. Off the cruise circuit entirely.
+            Mezedes style — order 8–10 small plates for the table and share. Fava, white eggplant, fresh fish.
+            ~€25–35/person with wine. <strong>Reservation required</strong> (+30 22860 31323).</p>
+          <p class="option-verdict">Best for: a proper sit-down meal. Requires a taxi (10 min from Fira).</p>
+        </div>
+      </div>
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <span class="option-tag tag-food">Restaurant</span>
+          <div class="option-title">Taverna in Pyrgos or Megalochori</div>
+          <p class="option-desc">These inland villages are almost entirely skipped by cruise tourists. Any of the small
+            family tavernas in the main squares serve honest Greek food at half the Fira/Oia prices. Order grilled lamb,
+            salad, local wine. No reservations needed.</p>
+          <p class="option-verdict">Best for: stumbling into something authentic without planning. Works as a lunch stop
+            on the way to/from Akrotiri.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="decide-box">
+      <h3>🗺 Decisions to Make — Santorini</h3>
+      <ul>
+        <li><strong>Hike vs. taxi to Oia?</strong> The trail is spectacular but takes half the day. Are all four of you
+          up for it?</li>
+        <li><strong>History or beach?</strong> Akrotiri ruins vs. an afternoon at Perissa/Kamari — or can you do both?
+        </li>
+        <li><strong>Sunset sailing?</strong> This is the standout activity and uses the late return best. Worth
+          ~€80–100/person? Needs advance booking — decide now.</li>
+        <li><strong>Wine tasting?</strong> Add-on to Akrotiri trip, or skip?</li>
+        <li><strong>Dinner timing:</strong> Metaxi Mas requires a reservation and a taxi — worth it, or keep it casual?
+        </li>
+      </ul>
+    </div>
+
+    <h2>Tips &amp; Scam Watch</h2>
+    <p><strong>Cable car down:</strong> At the end of the night, the line back to the Old Port can be 30–45 minutes.
+      Don't cut it close. Leave Fira with at least 90 minutes before your last tender.</p>
+    <p><strong>Buses are great:</strong> The KTEL network covers most of the island for €1.80. Far better value than
+      taxis for most trips.</p>
+    <div class="callout callout-scam">
+      <div class="callout-label">Watch Out</div>
+      Anyone at the Old Port offering "official" cable car tickets, tours, or "private transport." Buy cable car tickets
+      at the booth. Taxi prices are fixed by posted municipal rates — if a driver quotes something different, ask to see
+      the board.
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- EPHESUS / KUSADASI                                            -->
+  <!-- ============================================================ -->
+  <div class="page" id="ephesus">
+    <div class="port-header">
+      <div class="port-badge">Turkey · Sep 23 · Docked</div>
+      <div class="port-title">Ephesus / Kusadasi</div>
+      <div class="port-meta">Docked · 9:00am – 7:00pm &nbsp;·&nbsp; 10 hours ashore</div>
+    </div>
+
+    <div class="info-bar">
+      <div class="info-item">
+        <div class="info-label">Port Type</div>
+        <div class="info-value">Docked (walk off)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Currency</div>
+        <div class="info-value">Turkish Lira (TRY)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Ephesus Drive</div>
+        <div class="info-value">~20 min / 19km</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">USD/EUR</div>
+        <div class="info-value">Accepted, bad rate</div>
+      </div>
+    </div>
+
+    <h2>Getting Ashore &amp; Around</h2>
+    <p>You dock right in Kusadasi town. The terminal exit drops you onto the main waterfront — you're already there. For
+      Ephesus, taxis wait immediately outside the port. The round-trip fare including waiting time at the ruins runs
+      roughly 600–800 TRY (~€18–24 at current rates) for the whole cab — split four ways it's very cheap. Agree the
+      round-trip fare before you get in. Alternatively, shared minibuses (dolmuş) run regularly for far less if you
+      don't mind the extra navigation.</p>
+    <p>Get TRY from a bank ATM at the port before heading out. Currency exchange booths have terrible rates.</p>
+
+    <h2>Your Options</h2>
+
+    <div class="option-grid">
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Celsus_library_in_Ephesus.jpg?width=700"
+          alt="Library of Celsus, Ephesus" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-history">History</span>
+          <div class="option-title">Ephesus Ancient City</div>
+          <div class="option-time">⏱ 2–3 hrs · Go early (9am)</div>
+          <p class="option-desc">One of the best-preserved ancient cities in the world. A Roman city of 250,000 people:
+            the iconic Library of Celsus, a 25,000-seat theater, marble-paved streets, temples, and fountains. Entry
+            ~€15–18. The crowds arrive with tour buses around 10:30am — being there at opening makes a huge difference.
+          </p>
+          <p class="option-verdict">Best for: everyone. This is the main reason to be in Kusadasi. Even people who
+            "aren't into history" tend to be wowed. Allow 2.5–3 hours to actually absorb it.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Meryemana_Evi_Kusadasi.jpg?width=700"
+          alt="House of the Virgin Mary" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-culture">Culture</span>
+          <div class="option-title">House of the Virgin Mary</div>
+          <div class="option-time">⏱ 45–60 min · Add-on to Ephesus</div>
+          <p class="option-desc">Small stone house in the pine forest above Ephesus where Mary is believed to have spent
+            her final years (visited by multiple popes). Atmospheric and quiet — completely different feel from the
+            ruins. Entry ~€5. 10-min drive from Ephesus.</p>
+          <p class="option-verdict">Best for: people with religious interest or those who want a quiet, reflective
+            contrast to the busy ruins. Easy add-on — just tell your taxi driver when you book the round trip.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img" src="https://commons.wikimedia.org/wiki/Special:FilePath/Kusadasi_harbour.jpg?width=700"
+          alt="Kusadasi harbour" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-walk">Town</span>
+          <div class="option-title">Kusadasi Old Town &amp; Bazaar</div>
+          <div class="option-time">⏱ 1.5–2 hrs · Afternoon</div>
+          <p class="option-desc">Kusadasi's Kaleiçi (old town) has the Venetian-era Güvercin Island Castle (free,
+            connected by causeway), a proper bazaar, and the harbor promenade. Turkish leather, textiles, and ceramics
+            are genuinely well-priced here. Opening price is always inflated — negotiate 30–50% off, which is normal and
+            expected.</p>
+          <p class="option-verdict">Best for: an afternoon after Ephesus. Good for anyone who wants to browse and shop.
+            Skip if shopping isn't your thing.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Temple_of_Artemis_Ephesus.png?width=700"
+            alt="Temple of Artemis, Ephesus" onerror="this.style.display='none'">
+          <span class="option-tag tag-history">History</span>
+          <div class="option-title">Temple of Artemis (Artemision)</div>
+          <div class="option-time">⏱ 30–45 min · Add-on</div>
+          <p class="option-desc">One of the Seven Wonders of the Ancient World — or rather, what's left of it: a single
+            reconstructed column standing in a marsh. Anticlimactic for most visitors. Entry is free. About 2km from the
+            Ephesus main entrance.</p>
+          <p class="option-verdict">Best for: ancient history completists who want to check off a Wonder of the World.
+            Worth a quick stop if you're already nearby, but don't go out of your way.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Kusadasi_Ladies_Beach.jpg?width=700"
+            alt="Ladies Beach, Kusadasi" onerror="this.style.display='none'">
+          <span class="option-tag tag-beach">Beach</span>
+          <div class="option-title">Kusadasi Beach (Ladies Beach)</div>
+          <div class="option-time">⏱ 2 hrs · Afternoon</div>
+          <p class="option-desc">A clean sandy beach about 2.5km from the port (easy taxi or 30-min walk). Turkish tea,
+            sun loungers, calm Aegean water. Nothing remarkable, but warm and perfectly pleasant for an afternoon swim.
+          </p>
+          <p class="option-verdict">Best for: rounding out the day after Ephesus if you want water time. Better beach
+            days are coming (Mykonos, possibly Capri), so this is optional.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/14.30_Celsus_Library_in_Ephesus.JPG?width=700"
+            alt="Ephesus ruins with visitors" onerror="this.style.display='none'">
+          <span class="option-tag tag-halfday">Guide Option</span>
+          <div class="option-title">Hire a Local Guide for Ephesus</div>
+          <div class="option-time">⏱ 2 hrs at the site</div>
+          <p class="option-desc">Licensed local guides at the Ephesus entrance charge ~€30–40/hour for a group. Two
+            hours with a good guide is materially better than wandering alone — the site is enormous and context turns
+            ruins into stories. Book at the entrance or arrange in advance through a local agency.</p>
+          <p class="option-verdict">Recommendation: worth it. Split four ways it's ~€15–20/person for a 2-hour guided
+            tour. The difference between "wow" and "interesting pile of rocks" is often the guide.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Where to Eat</h2>
+    <div class="option-grid">
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <span class="option-tag tag-food">Restaurant</span>
+          <div class="option-title">Kazim Usta — Fishermen's Harbor</div>
+          <p class="option-desc">Family-run since the 1970s, open since before Kusadasi was a cruise port. Fresh fish,
+            grilled octopus, honest mezes. ~400–600 TRY/person with drinks. 10 min walk from terminal. Go before 1pm or
+            after 2pm.</p>
+        </div>
+      </div>
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <span class="option-tag tag-food">Restaurant</span>
+          <div class="option-title">Lunch near Ephesus (Selçuk town)</div>
+          <p class="option-desc">Selçuk, the small town adjacent to the ruins, has a cluster of no-nonsense Turkish
+            restaurants serving pide (Turkish flatbread pizza), köfte, and mezes. Cheaper than the port area and no
+            tourist markup. Ask your taxi driver for a recommendation — they know.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="decide-box">
+      <h3>🗺 Decisions to Make — Ephesus / Kusadasi</h3>
+      <ul>
+        <li><strong>Do you want a guide at Ephesus?</strong> ~€15–20/person split four ways, makes a genuine difference.
+          Yes or no?</li>
+        <li><strong>Add the House of the Virgin Mary?</strong> Easy 45-min add-on if you're already at Ephesus. Anyone
+          interested?</li>
+        <li><strong>Add the Temple of Artemis?</strong> Brief stop for history completists. Not worth it for everyone.
+        </li>
+        <li><strong>Afternoon: town &amp; bazaar, or beach?</strong> You'll have 2–3 hours after Ephesus.
+          Shopping/wandering vs. beach swim.</li>
+        <li><strong>Lunch at port or near the ruins?</strong> Eating in Selçuk is cheaper and more authentic.</li>
+      </ul>
+    </div>
+
+    <h2>Tips &amp; Scam Watch</h2>
+    <p><strong>Heat at the site:</strong> Ephesus in September is still hot. Bring a full water bottle per person,
+      sunscreen, and a hat. Almost no shade inside the ruins.</p>
+    <p><strong>Pre-book Ephesus tickets</strong> at muze.gov.tr to skip the 20–30 min queue that forms when tour groups
+      arrive.</p>
+    <div class="callout callout-scam">
+      <div class="callout-label">Watch Out</div>
+      "Carpet factory tours" — drivers and guides will offer to include a carpet or leather factory in your itinerary.
+      These are sales operations where guides collect commissions. You'll lose 45–60 minutes and face high-pressure
+      selling. Decline upfront. A good guide won't mind.
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- MYKONOS                                                       -->
+  <!-- ============================================================ -->
+  <div class="page" id="mykonos">
+    <div class="port-header">
+      <div class="port-badge">Greece · Sep 24 · Tendered Port</div>
+      <div class="port-title">Mykonos</div>
+      <div class="port-meta">Tender window: 7:00am – 5:00pm &nbsp;·&nbsp; Last tender back ~4:15pm (verify with ship)
+      </div>
+    </div>
+
+    <div class="info-bar">
+      <div class="info-item">
+        <div class="info-label">Port Type</div>
+        <div class="info-value">Tender</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Time Ashore</div>
+        <div class="info-value">~10 hours</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Tourist Tax</div>
+        <div class="info-value">€20/person (2025)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Tender to Town</div>
+        <div class="info-value">Lands in Chora</div>
+      </div>
+    </div>
+
+    <h2>Getting Ashore</h2>
+    <p>The ship tenders to the <strong>Old Port in Mykonos Town (Chora)</strong>, landing you directly at the
+      waterfront. No secondary transport needed — you step off and you're in town. With a 7am tender start, getting off
+      early means having the famous narrow streets almost to yourself for the first 90 minutes. The light is perfect,
+      the alleys are quiet, and the windmills are unobstructed. By 10am it gets busy.</p>
+    <p>Note: Greece introduced a <strong>€20/person cruise passenger fee</strong> for Mykonos in 2025. Budget €80 for
+      the group. Check your ship's announcements for how it's collected.</p>
+
+    <h2>Your Options</h2>
+
+    <div class="option-grid">
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Windmills_in_the_old_town_in_Mykonos,_Greece.jpg?width=700"
+          alt="Windmills of Mykonos" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-walk">Explore</span>
+          <div class="option-title">Chora (Old Town) — Wander &amp; Windmills</div>
+          <div class="option-time">⏱ 2–3 hrs · Best 7–10am</div>
+          <p class="option-desc">The iconic whitewashed maze of Mykonos Town. Kato Mili windmills overlook the harbor;
+            Little Venice is the row of buildings cantilevered over the water. Countless chapels, cats, and dead-end
+            alleys that suddenly open onto views. Best experienced without a plan — put phones away and wander.</p>
+          <p class="option-verdict">Non-optional, really — you're there and it takes 2 hours. The question is just when.
+            Early is dramatically better than midday.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/20100706_Terrace_of_the_Lions_Delos_Cyclades_Greece.jpg?width=700"
+          alt="Terrace of the Lions, Delos" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-history">History</span>
+          <div class="option-title">Delos Day Trip</div>
+          <div class="option-time">⏱ 4–5 hrs total · Morning departure</div>
+          <p class="option-desc">30-min ferry from the Old Port (~€20 round trip). An entire uninhabited sacred island —
+            UNESCO World Heritage site, one of Greece's most important archaeological sites. Temples, mosaics, the
+            famous Terrace of the Lions, views across the Cyclades. Entry €12. Ferries: 9am and 10am out, 12pm and 3pm
+            back.</p>
+          <p class="option-verdict">Best for: people who want depth over scenery. Takes a half-day. If you do this,
+            budget the afternoon for a beach or town. No shade, no real food on the island — bring water and snacks.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Elias_Beach_on_Mykonos.JPG?width=700"
+          alt="Beach on Mykonos" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-beach">Beach</span>
+          <div class="option-title">Ornos or Agios Ioannis Beach</div>
+          <div class="option-time">⏱ 2–3 hrs · Afternoon</div>
+          <p class="option-desc">Ornos is well-organized with calm water, easy bus access, and reasonably priced
+            tavernas. Agios Ioannis (the "Shirley Valentine" beach) is quieter and slightly more local. Both are 15–20
+            min by bus from Chora (€2). September water temperature ~23–24°C — genuinely warm.</p>
+          <p class="option-verdict">Best for: an afternoon wind-down after morning exploring. Good option if you've done
+            Delos in the morning and want to decompress. Avoid the famous party beaches (Paradise, Super Paradise) — not
+            the right crowd for this trip and the loungers cost €30+.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Athens_Piraeus_Mykonos_Palace_ship.jpg?width=700"
+            alt="Boat departing Mykonos" onerror="this.style.display='none'">
+          <span class="option-tag tag-boat">Boat</span>
+          <div class="option-title">Private or Shared Boat Hire</div>
+          <div class="option-time">⏱ 3–4 hrs · Flexible</div>
+          <p class="option-desc">Small boats can be chartered from the Old Port to tour sea caves, swim at remote
+            beaches, and visit Delos from the water. A shared boat tour runs €40–60/person; a small private boat
+            (perfect for 4) runs €200–350 for a half day. Enquire at the harbor on arrival or book ahead.</p>
+          <p class="option-verdict">Best for: four people who want to split the day their own way — Delos, a swim stop,
+            and back to town. More flexibility than the ferry.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Greek_Village_Bakery_03.jpg?width=700"
+            alt="Greek bakery and street food" onerror="this.style.display='none'">
+          <span class="option-tag tag-walk">Food</span>
+          <div class="option-title">Food &amp; Market Walk</div>
+          <div class="option-time">⏱ 1.5 hrs · Morning</div>
+          <p class="option-desc">Mykonos Town's backstreets have a covered market area with local cheeses (kopanisti,
+            the peppery local variety), honey, and pastries. Grab a tiropita or spanakopita from a bakery for €2. Decent
+            street food anchored in the streets behind the waterfront — as opposed to the €15 cocktails at Little
+            Venice.</p>
+          <p class="option-verdict">Good way to fill the early morning before deciding on the day's main activity. Low
+            commitment, low cost.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Mykonos_,Windmills.jpg?width=700"
+            alt="Mykonos harbour and town" onerror="this.style.display='none'">
+          <span class="option-tag tag-culture">Culture</span>
+          <div class="option-title">Aegean Maritime Museum</div>
+          <div class="option-time">⏱ 45–60 min</div>
+          <p class="option-desc">Small but excellent museum in Chora dedicated to Aegean seafaring history — ship
+            models, navigational instruments, maps going back centuries. Entry €4. Easy to combine with a wander through
+            the old town.</p>
+          <p class="option-verdict">Best for: anyone curious about how these islands actually functioned historically.
+            Completely crowd-free and air-conditioned. Good midday option when the streets are busy.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Where to Eat</h2>
+    <div class="option-grid">
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <span class="option-tag tag-food">Restaurant</span>
+          <div class="option-title">Nikos Taverna — Old Harbor</div>
+          <p class="option-desc">On the harbor waterfront, established 1979, same family. Grilled octopus, fresh catch
+            of the day, Greek salad, carafe of house white. Lunch for four with wine ~€60–80. Arrive before noon or
+            after 2pm.</p>
+        </div>
+      </div>
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <span class="option-tag tag-food">Casual</span>
+          <div class="option-title">Street Food in Chora</div>
+          <p class="option-desc">Gyro or souvlaki pita €4–7. Bakeries sell tiropita and spanakopita for €2–3.
+            Grab-and-wander option for a light lunch before an afternoon beach. Don't eat at the first place you see on
+            the waterfront — walk a block back and prices drop by 30%.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="decide-box">
+      <h3>🗺 Decisions to Make — Mykonos</h3>
+      <ul>
+        <li><strong>Delos or no Delos?</strong> It's the serious cultural choice — half a day, no shade, rewarding if
+          you care about ancient Greece. Worth it to some, not to others. Split opinions are totally valid here.</li>
+        <li><strong>If not Delos: beach or boat?</strong> Ornos/Agios Ioannis for a relaxed swim, or charter a small
+          boat for a half day?</li>
+        <li><strong>Timing the town walk:</strong> Everyone should do Chora, but when — early morning before anything
+          else, or saved for afternoon?</li>
+        <li><strong>Budget for a boat charter?</strong> A private half-day boat for four (~€250–350) gives maximum
+          flexibility. Is that worth it to the group?</li>
+      </ul>
+    </div>
+
+    <h2>Tips &amp; Scam Watch</h2>
+    <p><strong>Get lost on purpose:</strong> Put the phone away for an hour in Chora. The streets are deliberately
+      maze-like. You'll find things the tour groups miss.</p>
+    <p><strong>Buses are cheap:</strong> The KTEL from Fabrika station (5-min walk from Old Port) reaches most beaches
+      for €2. Frequency drops after 3pm — check return times before you go.</p>
+    <div class="callout callout-scam">
+      <div class="callout-label">Watch Out</div>
+      Mykonos has a documented pattern of restaurants adding unauthorized charges — service fees, unlisted covers, or
+      prices that don't match the displayed menu. Always check prices before sitting down and cross-check your bill.
+      Happens almost exclusively at tourist-facing waterfront spots, not at places like Nikos.
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- NAPLES / CAPRI                                                -->
+  <!-- ============================================================ -->
+  <div class="page" id="naples">
+    <div class="port-header">
+      <div class="port-badge">Italy · Sep 26 · Docked</div>
+      <div class="port-title">Naples / Capri</div>
+      <div class="port-meta">Docked · 7:00am – 6:00pm &nbsp;·&nbsp; 11 hours ashore</div>
+    </div>
+
+    <div class="info-bar">
+      <div class="info-item">
+        <div class="info-label">Port Type</div>
+        <div class="info-value">Docked (walk off)</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Ferry to Capri</div>
+        <div class="info-value">50 min · €19–28</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Train to Pompeii</div>
+        <div class="info-value">35 min · €3.10</div>
+      </div>
+      <div class="info-item">
+        <div class="info-label">Currency</div>
+        <div class="info-value">Euro (€)</div>
+      </div>
+    </div>
+
+    <h2>The Big Picture</h2>
+    <p>This is your most decision-heavy port because there are genuinely three different good days you could have, and
+      they're mutually exclusive. The three main "anchors" are Capri, Pompeii, and Naples city — and you only have 11
+      hours.</p>
+    <p>You can do two of these at a light pace, or one of them deeply. Below are the full options, plus combinations
+      that work.</p>
+
+    <h2>The Anchor Choices</h2>
+
+    <div class="option-grid">
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/80076_Capri,_Metropolitan_City_of_Naples,_Italy_-_panoramio_(1).jpg?width=700"
+          alt="Capri island panorama, Italy" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-walk">Island</span>
+          <div class="option-title">Capri</div>
+          <div class="option-time">⏱ 5–6 hrs total (incl. ferry) · Early departure essential</div>
+          <p class="option-desc">Stunning island with dramatic limestone cliffs, the famous Blue Grotto sea cave, the
+            village of Anacapri, and the Mount Solaro chairlift with panoramic views over the Tyrrhenian Sea. Glamorous
+            and beautiful — also crowded, expensive, and logistically demanding on a day trip. Hydrofoil from Molo
+            Beverello (~1km from cruise terminal): 50–65 min, €19–28 each way.</p>
+          <p class="option-verdict">Best for: people who've always wanted to see Capri, or who'd rather have scenery and
+            glamour over history. Commit to an early departure (7:30–8am ferry). <strong>Critical:</strong> last
+            reliable ferry back is ~5–5:30pm. Do not miss it.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Fortuna_Street,_Pompeii,_Italy_LOC_4754574859.jpg?width=700"
+          alt="Pompeii ruins, Italy" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-history">History</span>
+          <div class="option-title">Pompeii</div>
+          <div class="option-time">⏱ 4–5 hrs total · Morning</div>
+          <p class="option-desc">One of the most extraordinary archaeological sites in the world — an entire Roman city
+            frozen in 79 AD. The Forum, the 25,000-seat amphitheater, the brothel with preserved frescoes, the garden
+            houses. Entry €18. Circumvesuviana train from Napoli Piazza Garibaldi: 35 min, €3.10 each way. Trains run
+            every 30–40 min from about 7am.</p>
+          <p class="option-verdict">Best for: history and scale. This is the "wow" day for most people who do it.
+            Pre-book tickets at pompeiisites.org to skip the 30–45 min queue. Can be combined with Naples city in the
+            afternoon.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Naples_spaccanapoli.JPG?width=700"
+          alt="Spaccanapoli, Naples" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-walk">City</span>
+          <div class="option-title">Naples City</div>
+          <div class="option-time">⏱ 3–4 hrs · Flexible</div>
+          <p class="option-desc">The real deal — chaotic, dense, alive. Spaccanapoli street bisects the historic center;
+            side streets lead to Baroque churches, street food markets, and the Sansevero Chapel (Baroque sculpture
+            including the astonishing "Veiled Christ" statue — €8, must pre-book). The Museo Archaeologico Nazionale
+            holds the world's best Pompeii artifact collection (€15, 1.5 hrs).</p>
+          <p class="option-verdict">Best for: people who want authentic urban Italy, not a theme park. Easiest to
+            combine with Pompeii (train + walk back to port). Not for people who want a relaxing day — Naples is
+            stimulating in both good and challenging ways.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Supporting Options</h2>
+
+    <div class="option-grid">
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Blue_Grotto_Capri_Inside.jpg?width=700"
+            alt="Inside the Blue Grotto, Capri" onerror="this.style.display='none'">
+          <span class="option-tag tag-culture">Capri add-on</span>
+          <div class="option-title">Blue Grotto (Grotta Azzurra)</div>
+          <div class="option-time">⏱ 1–1.5 hrs in Capri · Morning only</div>
+          <p class="option-desc">Famous sea cave where sunlight enters through an underwater opening and turns the water
+            electric blue. Boats go in one at a time lying flat. Ticket includes small rowboat into the cave (~€15).
+            Waits can be 45–60 min long, and the cave closes when seas are rough. Best visited in the morning when light
+            is optimal and lines shorter.</p>
+          <p class="option-verdict">Worth doing if it's open and you arrive early. Can't be guaranteed — weather and
+            crowd conditions vary. If the wait is over an hour, consider skipping it and using time on the island
+            instead.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Immagine_d%27insieme_2,_Cappella_Sansevero.jpg?width=700"
+            alt="Cappella Sansevero, Naples" onerror="this.style.display='none'">
+          <span class="option-tag tag-culture">Naples add-on</span>
+          <div class="option-title">Sansevero Chapel</div>
+          <div class="option-time">⏱ 45 min · Pre-book required</div>
+          <p class="option-desc">Small Baroque chapel containing the "Veiled Christ" — a marble sculpture of such
+            technical improbability that people have assumed it must be real fabric. One of the most extraordinary
+            things you can see in Italy. Entry €8. Tiny space with limited daily capacity: book at cappellaansevero.it
+            at least a week ahead.</p>
+          <p class="option-verdict">Do not skip this if you're doing Naples. It takes 45 minutes and it will be the
+            thing people talk about afterward. Just book it now.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option-body" style="padding-top:14px;">
+          <img class="option-img"
+            src="https://commons.wikimedia.org/wiki/Special:FilePath/Punch_Neapolitan_Pizza_Margherita.jpg?width=700"
+            alt="Neapolitan pizza Margherita" onerror="this.style.display='none'">
+          <span class="option-tag tag-food">Naples add-on</span>
+          <div class="option-title">Eat Real Neapolitan Pizza</div>
+          <div class="option-time">⏱ 45 min · Lunch</div>
+          <p class="option-desc">Not optional if you're in Naples. L'Antica Pizzeria da Michele (Via Cesare Sersale 1) —
+            only Margherita and Marinara, cash only, a queue that moves fast, €5–6 a pizza. Pizzeria Di Matteo (Via dei
+            Tribunali 94) — equally good, slightly more variety, same price. Naples pizza is categorically different
+            from everywhere else.</p>
+          <p class="option-verdict">Even if you're doing Capri, consider a 45-min detour to eat pizza before boarding
+            the ferry. The port to Da Michele is 15 min on foot.</p>
+        </div>
+      </div>
+
+      <div class="option">
+        <img class="option-img"
+          src="https://commons.wikimedia.org/wiki/Special:FilePath/Napoli_-_Museo_archeologico_nazionale_4645.jpg?width=700"
+          alt="National Archaeological Museum of Naples" onerror="this.style.display='none'">
+        <div class="option-body">
+          <span class="option-tag tag-history">Naples add-on</span>
+          <div class="option-title">Museo Archaeologico Nazionale (MANN)</div>
+          <div class="option-time">⏱ 1.5–2 hrs</div>
+          <p class="option-desc">The world's best collection of Pompeian artifacts — the original mosaics, sculpture,
+            jewelry, and frescoes rescued from the ruins. If you're going to Pompeii, this puts everything in context.
+            If you're not going to Pompeii, this is a worthy standalone. Entry €15.</p>
+          <p class="option-verdict">Best as a Pompeii companion — do the ruins, then the museum. Together they make one
+            exceptional history day.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <h2>Recommended Day Combinations</h2>
+    <p>Here are three day structures that actually work within the 7am–6pm window:</p>
+
+    <div class="callout callout-tip">
+      <div class="callout-label">Option A — The History Day</div>
+      7:30am train to Pompeii → arrive 8:10am, 3 hrs at the ruins → back in Naples by noon → pizza at Da Michele →
+      Sansevero Chapel → wander Spaccanapoli → back to ship by 5:30pm. <strong>Strong recommendation for
+        first-timers.</strong>
+    </div>
+    <div class="callout callout-tip">
+      <div class="callout-label">Option B — The Capri Day</div>
+      7:30–8am hydrofoil to Capri → Blue Grotto (if conditions allow, morning only) → Anacapri + Mount Solaro chairlift
+      → lunch on the island → 4pm ferry back → pizza near port → ship. <strong>More expensive, more relaxed, visually
+        spectacular.</strong>
+    </div>
+    <div class="callout callout-tip">
+      <div class="callout-label">Option C — Split Group Day</div>
+      Some go to Capri, some go to Pompeii. Meet back at the ship. Works cleanly if the group has divided preferences.
+      Just confirm last ferry and last train times before you split up.
+    </div>
+
+    <div class="decide-box">
+      <h3>🗺 Decisions to Make — Naples / Capri</h3>
+      <ul>
+        <li><strong>The big one: Capri, Pompeii, or split?</strong> This determines the whole day. Does anyone have a
+          strong preference? Has anyone done Pompeii before?</li>
+        <li><strong>If Pompeii: add the Sansevero Chapel?</strong> Book it now at cappellaansevero.it — it sells out.
+          Yes or skip?</li>
+        <li><strong>If Capri: Blue Grotto worth the potential wait?</strong> It can be 45–60 min in line. Commit to
+          morning visit only.</li>
+        <li><strong>Pizza — everyone eating at Da Michele or Di Matteo?</strong> Non-negotiable in Naples, really. Just
+          a question of which.</li>
+        <li><strong>If splitting the group:</strong> agree on return logistics clearly — the ferry and train schedules
+          leave no room for missed connections.</li>
+      </ul>
+    </div>
+
+    <h2>Tips &amp; Scam Watch</h2>
+    <p><strong>Capri ferry timing is not flexible:</strong> Last reliable hydrofoil is around 5–5:30pm, and seas can
+      cause cancellations or delays in September. Build in a 90-minute buffer before your 6pm ship departure. This is
+      the one day to not cut things close.</p>
+    <p><strong>Naples street smarts:</strong> Bag-snatching from scooters happens in the historic center. Keep bags on
+      your inside arm and don't display phones/cameras conspicuously in crowded streets. The area is lively and mostly
+      safe — just be ordinarily aware.</p>
+    <div class="callout callout-scam">
+      <div class="callout-label">Watch Out</div>
+      Naples cruise terminal taxis have a history of overcharging tourists. Use only white licensed cabs with a running
+      meter, or agree the fixed city fare (tariffe predeterminate) before getting in. The fare to Piazza Garibaldi
+      (train station) should be €6–12. Anyone offering unofficial "transport" at the port exit — decline and walk.
+    </div>
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- PRACTICAL TIPS                                                -->
+  <!-- ============================================================ -->
+  <div class="page" id="tips">
+    <div class="port-header">
+      <div class="port-badge">Reference</div>
+      <div class="port-title">Practical Notes</div>
+      <div class="port-meta">Applies across all ports</div>
+    </div>
+
+    <h2>Book Before You Board</h2>
+    <p>These have limited availability and should be sorted before the cruise departs:</p>
+    <p>
+      — <strong>Santorini sunset sailing</strong> — sells out weeks in advance. Book directly with a local catamaran
+      operator (not the ship).<br>
+      — <strong>Metaxi Mas restaurant, Santorini</strong> — call +30 22860 31323 or check their website.<br>
+      — <strong>Ephesus tickets</strong> — pre-book at muze.gov.tr to skip the entry queue.<br>
+      — <strong>Pompeii tickets</strong> — pompeiisites.org. The in-person queue is 30–45 min.<br>
+      — <strong>Sansevero Chapel, Naples</strong> — cappellaansevero.it. Small venue, sells out.
+    </p>
+
+    <h2>Money</h2>
+    <p>Greece and Italy: cards widely accepted, but keep some cash for taxis, small cafes, and buses. Turkey: lean on
+      cash — get Turkish Lira from a bank ATM at port (not the exchange booths). A travel card with no foreign
+      transaction fees (Charles Schwab debit refunds all ATM fees globally) saves meaningfully over eight days.</p>
+
+    <h2>Tender Port Strategy</h2>
+    <p>For Santorini and Mykonos, pick up tender tickets from Guest Services the night before or first thing in the
+      morning — aim for the first or second tender run. Being proactive by 30 minutes can mean 90 minutes' difference in
+      how your day starts.</p>
+
+    <h2>What to Pack for Ports</h2>
+    <p>Packable sun hat (Ephesus and Pompeii have almost no shade). Comfortable, already-broken-in walking shoes. A
+      light scarf (Turkey's religious sites require shoulders/knees covered). Portable phone charger. Sunscreen in your
+      day bag, not buried in the cabin. A small dry bag for tender days if you want to protect valuables.</p>
+
+    <h2>The Only General Rule That Matters</h2>
+    <p>In Greece and Italy, the restaurants closest to any major tourist attraction or cruise terminal are almost always
+      the most expensive and least interesting. Walk two blocks away. If a restaurant has a host outside flagging you
+      in, or a laminated photo menu, those are red flags. The best places have handwritten specials boards and don't
+      need to advertise. This holds almost everywhere and has saved us from bad meals on every port day.</p>
+
+    <hr class="section-break">
+    <p style="text-align:center; color:#888; font-size:9.5pt;">Have a wonderful trip. September in the Mediterranean is
+      one of the best times to be there.</p>
+  </div>
+
+  <div class="doc-footer">
+    Mediterranean Cruise Planning Guide · Odyssey of the Seas · September 2025<br>
+    Prepared June 2025 · Confirm prices, ferry times, and schedules locally before your trip
+  </div>
+
+  <script>
+    document.querySelectorAll('img.option-img').forEach(img => {
+      img.addEventListener('error', function () { this.style.display = 'none'; });
+    });
+  </script>
+</body>
+
+</html>
