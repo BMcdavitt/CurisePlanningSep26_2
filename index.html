@@ -262,6 +262,25 @@
       overflow: hidden;
     }
 
+    /* Recommended cards get a blue top-banner and stronger border */
+    .option.recommended {
+      border: 2px solid #2e6da4;
+    }
+
+    .option.recommended::before {
+      content: "★ Star Pick";
+      display: block;
+      background: #2e6da4;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 8pt;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      text-align: center;
+    }
+
     .option-img {
       width: 100%;
       height: 190px;
@@ -652,13 +671,13 @@
 
     <h2>Getting Ashore</h2>
     <p>The ship anchors in the caldera and tenders passengers to the <strong>Old Port (Skala)</strong> at the base of
-      the cliff. From there, three options to reach Fira (main town at the top): <strong>cable car</strong> (€10/person,
-      5 min, best option), <strong>walking up 588 steps</strong> (15–20 min, steep), or <strong>donkey ride</strong>
-      (skip it — slow and ethically questionable). Lines build quickly after 10am. With a 10am tender start, grab an
-      early boat and go.</p>
-    <p><strong>Getting around the island:</strong> Buses are cheap (€1.80/ride) from the main KTEL station in Fira and
-      reach most destinations. Taxis are available at fixed posted rates. ATV rentals are popular but roads are narrow
-      and accidents are common — know that going in.</p>
+      the cliff. From there, three options to reach Fira (main town at the top): <strong>cable car</strong> (€10
+      (~$11)/person, 5 min, best option), <strong>walking up 588 steps</strong> (15–20 min, steep), or <strong>donkey
+        ride</strong> (skip it — slow and ethically questionable). Lines build quickly after 10am. With a 10am tender
+      start, grab an early boat and go.</p>
+    <p><strong>Getting around the island:</strong> Buses are cheap (€1.80 (~$2)/ride) from the main KTEL station in Fira
+      and reach most destinations. Taxis are available at fixed posted rates. ATV rentals are popular but roads are
+      narrow and accidents are common — know that going in.</p>
 
     <div class="callout callout-tip">
       <div class="callout-label">The Big Advantage Today</div>
@@ -695,9 +714,9 @@
           <span class="option-tag tag-walk">Village</span>
           <div class="option-title">Oia Village (Taxi / Bus)</div>
           <div class="option-time">⏱ 2–3 hrs · Any time of day</div>
-          <p class="option-desc">Skip the hike and go straight to Oia by taxi (~€25 from Fira) or bus (€1.80). The
-            iconic blue-domed churches, narrow marble alleys, and caldera views are all here. Most beautiful early
-            morning or late afternoon when tour groups thin out.</p>
+          <p class="option-desc">Skip the hike and go straight to Oia by taxi (~€25 (~$28) from Fira) or bus (€1.80
+            (~$2)). The iconic blue-domed churches, narrow marble alleys, and caldera views are all here. Most beautiful
+            early morning or late afternoon when tour groups thin out.</p>
           <p class="option-verdict">Best for: people who want the Santorini postcard without the 3-hour hike. Pairs well
             with a late lunch and the sunset.</p>
         </div>
@@ -711,16 +730,16 @@
           <div class="option-title">Akrotiri Ruins + Red Beach</div>
           <div class="option-time">⏱ 2.5–3 hrs total · Morning or early afternoon</div>
           <p class="option-desc">Akrotiri is a Minoan Bronze Age city buried by Santorini's volcanic eruption —
-            3,500-year-old preserved streets, frescoes, and buildings, all covered and shaded. Entry ~€12. Red Beach is
-            a 10-minute walk: dramatic red-and-black volcanic cliffs over dark sand. About 25 min from Fira by bus or
-            taxi.</p>
+            3,500-year-old preserved streets, frescoes, and buildings, all covered and shaded. Entry ~€12 (~$13). Red
+            Beach is a 10-minute walk: dramatic red-and-black volcanic cliffs over dark sand. About 25 min from Fira by
+            bus or taxi.</p>
           <p class="option-verdict">Best for: history lovers. The ruins are genuinely impressive and less crowded than
             Oia. Red Beach is photogenic but not great for swimming. Can do this in the morning and still make it back
             for sunset.</p>
         </div>
       </div>
 
-      <div class="option">
+      <div class="option recommended">
         <img class="option-img"
           src="https://commons.wikimedia.org/wiki/Special:FilePath/Santorini_caldera_view.jpg?width=700"
           alt="Santorini caldera from the water" onerror="this.style.display='none'">
@@ -729,8 +748,8 @@
           <div class="option-title">Caldera Sunset Sailing</div>
           <div class="option-time">⏱ 3–4 hrs · Departs ~3:30–4pm</div>
           <p class="option-desc">Catamaran tours circle the caldera, stop at the volcanic hot springs, and are back by
-            7:30–8pm. Dinner and wine usually included. ~€80–100/person. You watch the sunset from the water looking
-            back at the cliff — far better than fighting crowds at Oia's viewpoint.</p>
+            7:30–8pm. Dinner and wine usually included. ~€80–100 (~$88–110)/person. You watch the sunset from the water
+            looking back at the cliff — far better than fighting crowds at Oia's viewpoint.</p>
           <p class="option-verdict">Best for: everyone, honestly. This is the one activity that uses your late return
             window most effectively. <strong>Book in advance</strong> — sells out weeks ahead. Book direct with a local
             operator, not through the ship.</p>
@@ -748,7 +767,7 @@
             are the main ones, both about 30 min from Fira by bus. Loungers, tavernas, warm water in September. Nothing
             fancy, but genuinely enjoyable.</p>
           <p class="option-verdict">Best for: people who want beach time without the Mykonos scene. Good afternoon
-            option if you've done Oia/Akrotiri in the morning. September water temperature ~24°C.</p>
+            option if you've done Oia/Akrotiri in the morning. September water temperature ~24°C (~75°F).</p>
         </div>
       </div>
 
@@ -762,7 +781,7 @@
           <div class="option-time">⏱ 1.5–2 hrs · Flexible</div>
           <p class="option-desc">Santorini's volcanic soil produces distinctive Assyrtiko white wine — dry, mineral,
             high acid. Estate Argyros and Santo Wines (cliff-top views, pricier) are the top two. A tasting with 4–5
-            wines runs €20–35/person. Most estates are in the southern part of the island near Akrotiri.</p>
+            wines runs €20–35 (~$22–39)/person. Most estates are in the southern part of the island near Akrotiri.</p>
           <p class="option-verdict">Best for: wine drinkers. Easy to combine with Akrotiri. Santo Wines has the best
             view but most tourist traffic; Argyros is more serious about the wine.</p>
         </div>
@@ -778,8 +797,8 @@
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Metaxi Mas — Exo Gonia village</div>
           <p class="option-desc">Where Santorini locals eat on special occasions. Off the cruise circuit entirely.
-            Mezedes style — order 8–10 small plates for the table and share. Fava, white eggplant, fresh fish.
-            ~€25–35/person with wine. <strong>Reservation required</strong> (+30 22860 31323).</p>
+            Mezedes style — order 8–10 small plates for the table and share. Fava, white eggplant, fresh fish. ~€25–35
+            (~$28–39)/person with wine. <strong>Reservation required</strong> (+30 22860 31323).</p>
           <p class="option-verdict">Best for: a proper sit-down meal. Requires a taxi (10 min from Fira).</p>
         </div>
       </div>
@@ -803,8 +822,8 @@
           up for it?</li>
         <li><strong>History or beach?</strong> Akrotiri ruins vs. an afternoon at Perissa/Kamari — or can you do both?
         </li>
-        <li><strong>Sunset sailing?</strong> This is the standout activity and uses the late return best. Worth
-          ~€80–100/person? Needs advance booking — decide now.</li>
+        <li><strong>Sunset sailing?</strong> This is the standout activity and uses the late return best. Worth ~€80–100
+          (~$88–110)/person? Needs advance booking — decide now.</li>
         <li><strong>Wine tasting?</strong> Add-on to Akrotiri trip, or skip?</li>
         <li><strong>Dinner timing:</strong> Metaxi Mas requires a reservation and a taxi — worth it, or keep it casual?
         </li>
@@ -814,8 +833,8 @@
     <h2>Tips &amp; Scam Watch</h2>
     <p><strong>Cable car down:</strong> At the end of the night, the line back to the Old Port can be 30–45 minutes.
       Don't cut it close. Leave Fira with at least 90 minutes before your last tender.</p>
-    <p><strong>Buses are great:</strong> The KTEL network covers most of the island for €1.80. Far better value than
-      taxis for most trips.</p>
+    <p><strong>Buses are great:</strong> The KTEL network covers most of the island for €1.80 (~$2). Far better value
+      than taxis for most trips.</p>
     <div class="callout callout-scam">
       <div class="callout-label">Watch Out</div>
       Anyone at the Old Port offering "official" cable car tickets, tours, or "private transport." Buy cable car tickets
@@ -857,16 +876,16 @@
     <h2>Getting Ashore &amp; Around</h2>
     <p>You dock right in Kusadasi town. The terminal exit drops you onto the main waterfront — you're already there. For
       Ephesus, taxis wait immediately outside the port. The round-trip fare including waiting time at the ruins runs
-      roughly 600–800 TRY (~€18–24 at current rates) for the whole cab — split four ways it's very cheap. Agree the
-      round-trip fare before you get in. Alternatively, shared minibuses (dolmuş) run regularly for far less if you
-      don't mind the extra navigation.</p>
+      roughly 600–800 TRY (~$17–22) for the whole cab — split four ways it's very cheap. Agree the round-trip fare
+      before you get in. Alternatively, shared minibuses (dolmuş) run regularly for far less if you don't mind the extra
+      navigation.</p>
     <p>Get TRY from a bank ATM at the port before heading out. Currency exchange booths have terrible rates.</p>
 
     <h2>Your Options</h2>
 
     <div class="option-grid">
 
-      <div class="option">
+      <div class="option recommended">
         <img class="option-img"
           src="https://commons.wikimedia.org/wiki/Special:FilePath/Celsus_library_in_Ephesus.jpg?width=700"
           alt="Library of Celsus, Ephesus" onerror="this.style.display='none'">
@@ -876,8 +895,8 @@
           <div class="option-time">⏱ 2–3 hrs · Go early (9am)</div>
           <p class="option-desc">One of the best-preserved ancient cities in the world. A Roman city of 250,000 people:
             the iconic Library of Celsus, a 25,000-seat theater, marble-paved streets, temples, and fountains. Entry
-            ~€15–18. The crowds arrive with tour buses around 10:30am — being there at opening makes a huge difference.
-          </p>
+            ~€15–18 (~$17–20). The crowds arrive with tour buses around 10:30am — being there at opening makes a huge
+            difference.</p>
           <p class="option-verdict">Best for: everyone. This is the main reason to be in Kusadasi. Even people who
             "aren't into history" tend to be wowed. Allow 2.5–3 hours to actually absorb it.</p>
         </div>
@@ -893,7 +912,7 @@
           <div class="option-time">⏱ 45–60 min · Add-on to Ephesus</div>
           <p class="option-desc">Small stone house in the pine forest above Ephesus where Mary is believed to have spent
             her final years (visited by multiple popes). Atmospheric and quiet — completely different feel from the
-            ruins. Entry ~€5. 10-min drive from Ephesus.</p>
+            ruins. Entry ~€5 (~$6). 10-min drive from Ephesus.</p>
           <p class="option-verdict">Best for: people with religious interest or those who want a quiet, reflective
             contrast to the busy ruins. Easy add-on — just tell your taxi driver when you book the round trip.</p>
         </div>
@@ -947,7 +966,7 @@
         </div>
       </div>
 
-      <div class="option">
+      <div class="option recommended">
         <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/14.30_Celsus_Library_in_Ephesus.JPG?width=700"
@@ -955,11 +974,11 @@
           <span class="option-tag tag-halfday">Guide Option</span>
           <div class="option-title">Hire a Local Guide for Ephesus</div>
           <div class="option-time">⏱ 2 hrs at the site</div>
-          <p class="option-desc">Licensed local guides at the Ephesus entrance charge ~€30–40/hour for a group. Two
-            hours with a good guide is materially better than wandering alone — the site is enormous and context turns
-            ruins into stories. Book at the entrance or arrange in advance through a local agency.</p>
-          <p class="option-verdict">Recommendation: worth it. Split four ways it's ~€15–20/person for a 2-hour guided
-            tour. The difference between "wow" and "interesting pile of rocks" is often the guide.</p>
+          <p class="option-desc">Licensed local guides at the Ephesus entrance charge ~€30–40 (~$33–44)/hour for a
+            group. Two hours with a good guide is materially better than wandering alone — the site is enormous and
+            context turns ruins into stories. Book at the entrance or arrange in advance through a local agency.</p>
+          <p class="option-verdict">Recommendation: worth it. Split four ways it's ~€15–20 (~$17–22)/person for a 2-hour
+            guided tour. The difference between "wow" and "interesting pile of rocks" is often the guide.</p>
         </div>
       </div>
 
@@ -972,8 +991,8 @@
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Kazim Usta — Fishermen's Harbor</div>
           <p class="option-desc">Family-run since the 1970s, open since before Kusadasi was a cruise port. Fresh fish,
-            grilled octopus, honest mezes. ~400–600 TRY/person with drinks. 10 min walk from terminal. Go before 1pm or
-            after 2pm.</p>
+            grilled octopus, honest mezes. ~400–600 TRY (~$11–17)/person with drinks. 10 min walk from terminal. Go
+            before 1pm or after 2pm.</p>
         </div>
       </div>
       <div class="option">
@@ -990,8 +1009,8 @@
     <div class="decide-box">
       <h3>🗺 Decisions to Make — Ephesus / Kusadasi</h3>
       <ul>
-        <li><strong>Do you want a guide at Ephesus?</strong> ~€15–20/person split four ways, makes a genuine difference.
-          Yes or no?</li>
+        <li><strong>Do you want a guide at Ephesus?</strong> ~€15–20 (~$17–22)/person split four ways, makes a genuine
+          difference. Yes or no?</li>
         <li><strong>Add the House of the Virgin Mary?</strong> Easy 45-min add-on if you're already at Ephesus. Anyone
           interested?</li>
         <li><strong>Add the Temple of Artemis?</strong> Brief stop for history completists. Not worth it for everyone.
@@ -1038,7 +1057,7 @@
       </div>
       <div class="info-item">
         <div class="info-label">Tourist Tax</div>
-        <div class="info-value">€20/person (2025)</div>
+        <div class="info-value">€20 (~$22)/person (2025)</div>
       </div>
       <div class="info-item">
         <div class="info-label">Tender to Town</div>
@@ -1051,8 +1070,8 @@
       waterfront. No secondary transport needed — you step off and you're in town. With a 7am tender start, getting off
       early means having the famous narrow streets almost to yourself for the first 90 minutes. The light is perfect,
       the alleys are quiet, and the windmills are unobstructed. By 10am it gets busy.</p>
-    <p>Note: Greece introduced a <strong>€20/person cruise passenger fee</strong> for Mykonos in 2025. Budget €80 for
-      the group. Check your ship's announcements for how it's collected.</p>
+    <p>Note: Greece introduced a <strong>€20 (~$22)/person cruise passenger fee</strong> for Mykonos in 2025. Budget €80
+      (~$88) for the group. Check your ship's announcements for how it's collected.</p>
 
     <h2>Your Options</h2>
 
@@ -1074,7 +1093,7 @@
         </div>
       </div>
 
-      <div class="option">
+      <div class="option recommended">
         <img class="option-img"
           src="https://commons.wikimedia.org/wiki/Special:FilePath/20100706_Terrace_of_the_Lions_Delos_Cyclades_Greece.jpg?width=700"
           alt="Terrace of the Lions, Delos" onerror="this.style.display='none'">
@@ -1082,10 +1101,10 @@
           <span class="option-tag tag-history">History</span>
           <div class="option-title">Delos Day Trip</div>
           <div class="option-time">⏱ 4–5 hrs total · Morning departure</div>
-          <p class="option-desc">30-min ferry from the Old Port (~€20 round trip). An entire uninhabited sacred island —
-            UNESCO World Heritage site, one of Greece's most important archaeological sites. Temples, mosaics, the
-            famous Terrace of the Lions, views across the Cyclades. Entry €12. Ferries: 9am and 10am out, 12pm and 3pm
-            back.</p>
+          <p class="option-desc">30-min ferry from the Old Port (~€20 (~$22) round trip). An entire uninhabited sacred
+            island — UNESCO World Heritage site, one of Greece's most important archaeological sites. Temples, mosaics,
+            the famous Terrace of the Lions, views across the Cyclades. Entry €12 (~$13). Ferries: 9am and 10am out,
+            12pm and 3pm back.</p>
           <p class="option-verdict">Best for: people who want depth over scenery. Takes a half-day. If you do this,
             budget the afternoon for a beach or town. No shade, no real food on the island — bring water and snacks.</p>
         </div>
@@ -1101,10 +1120,10 @@
           <div class="option-time">⏱ 2–3 hrs · Afternoon</div>
           <p class="option-desc">Ornos is well-organized with calm water, easy bus access, and reasonably priced
             tavernas. Agios Ioannis (the "Shirley Valentine" beach) is quieter and slightly more local. Both are 15–20
-            min by bus from Chora (€2). September water temperature ~23–24°C — genuinely warm.</p>
+            min by bus from Chora (€2 (~$2)). September water temperature ~23–24°C (~73–75°F) — genuinely warm.</p>
           <p class="option-verdict">Best for: an afternoon wind-down after morning exploring. Good option if you've done
             Delos in the morning and want to decompress. Avoid the famous party beaches (Paradise, Super Paradise) — not
-            the right crowd for this trip and the loungers cost €30+.</p>
+            the right crowd for this trip and the loungers cost €30+ (~$33+).</p>
         </div>
       </div>
 
@@ -1117,8 +1136,9 @@
           <div class="option-title">Private or Shared Boat Hire</div>
           <div class="option-time">⏱ 3–4 hrs · Flexible</div>
           <p class="option-desc">Small boats can be chartered from the Old Port to tour sea caves, swim at remote
-            beaches, and visit Delos from the water. A shared boat tour runs €40–60/person; a small private boat
-            (perfect for 4) runs €200–350 for a half day. Enquire at the harbor on arrival or book ahead.</p>
+            beaches, and visit Delos from the water. A shared boat tour runs €40–60 (~$44–66)/person; a small private
+            boat (perfect for 4) runs €200–350 (~$220–385) for a half day. Enquire at the harbor on arrival or book
+            ahead.</p>
           <p class="option-verdict">Best for: four people who want to split the day their own way — Delos, a swim stop,
             and back to town. More flexibility than the ferry.</p>
         </div>
@@ -1133,9 +1153,9 @@
           <div class="option-title">Food &amp; Market Walk</div>
           <div class="option-time">⏱ 1.5 hrs · Morning</div>
           <p class="option-desc">Mykonos Town's backstreets have a covered market area with local cheeses (kopanisti,
-            the peppery local variety), honey, and pastries. Grab a tiropita or spanakopita from a bakery for €2. Decent
-            street food anchored in the streets behind the waterfront — as opposed to the €15 cocktails at Little
-            Venice.</p>
+            the peppery local variety), honey, and pastries. Grab a tiropita or spanakopita from a bakery for €2 (~$2).
+            Decent street food anchored in the streets behind the waterfront — as opposed to the €15 (~$17) cocktails at
+            Little Venice.</p>
           <p class="option-verdict">Good way to fill the early morning before deciding on the day's main activity. Low
             commitment, low cost.</p>
         </div>
@@ -1150,8 +1170,8 @@
           <div class="option-title">Aegean Maritime Museum</div>
           <div class="option-time">⏱ 45–60 min</div>
           <p class="option-desc">Small but excellent museum in Chora dedicated to Aegean seafaring history — ship
-            models, navigational instruments, maps going back centuries. Entry €4. Easy to combine with a wander through
-            the old town.</p>
+            models, navigational instruments, maps going back centuries. Entry €4 (~$4). Easy to combine with a wander
+            through the old town.</p>
           <p class="option-verdict">Best for: anyone curious about how these islands actually functioned historically.
             Completely crowd-free and air-conditioned. Good midday option when the streets are busy.</p>
         </div>
@@ -1166,17 +1186,17 @@
           <span class="option-tag tag-food">Restaurant</span>
           <div class="option-title">Nikos Taverna — Old Harbor</div>
           <p class="option-desc">On the harbor waterfront, established 1979, same family. Grilled octopus, fresh catch
-            of the day, Greek salad, carafe of house white. Lunch for four with wine ~€60–80. Arrive before noon or
-            after 2pm.</p>
+            of the day, Greek salad, carafe of house white. Lunch for four with wine ~€60–80 (~$66–88). Arrive before
+            noon or after 2pm.</p>
         </div>
       </div>
       <div class="option">
         <div class="option-body option-body--no-img">
           <span class="option-tag tag-food">Casual</span>
           <div class="option-title">Street Food in Chora</div>
-          <p class="option-desc">Gyro or souvlaki pita €4–7. Bakeries sell tiropita and spanakopita for €2–3.
-            Grab-and-wander option for a light lunch before an afternoon beach. Don't eat at the first place you see on
-            the waterfront — walk a block back and prices drop by 30%.</p>
+          <p class="option-desc">Gyro or souvlaki pita €4–7 (~$4–8). Bakeries sell tiropita and spanakopita for €2–3
+            (~$2–3). Grab-and-wander option for a light lunch before an afternoon beach. Don't eat at the first place
+            you see on the waterfront — walk a block back and prices drop by 30%.</p>
         </div>
       </div>
     </div>
@@ -1190,8 +1210,8 @@
           boat for a half day?</li>
         <li><strong>Timing the town walk:</strong> Everyone should do Chora, but when — early morning before anything
           else, or saved for afternoon?</li>
-        <li><strong>Budget for a boat charter?</strong> A private half-day boat for four (~€250–350) gives maximum
-          flexibility. Is that worth it to the group?</li>
+        <li><strong>Budget for a boat charter?</strong> A private half-day boat for four (~€250–350 (~$275–385)) gives
+          maximum flexibility. Is that worth it to the group?</li>
       </ul>
     </div>
 
@@ -1199,7 +1219,7 @@
     <p><strong>Get lost on purpose:</strong> Put the phone away for an hour in Chora. The streets are deliberately
       maze-like. You'll find things the tour groups miss.</p>
     <p><strong>Buses are cheap:</strong> The KTEL from Fabrika station (5-min walk from Old Port) reaches most beaches
-      for €2. Frequency drops after 3pm — check return times before you go.</p>
+      for €2 (~$2). Frequency drops after 3pm — check return times before you go.</p>
     <div class="callout callout-scam">
       <div class="callout-label">Watch Out</div>
       Mykonos has a documented pattern of restaurants adding unauthorized charges — service fees, unlisted covers, or
@@ -1226,11 +1246,11 @@
       </div>
       <div class="info-item">
         <div class="info-label">Ferry to Capri</div>
-        <div class="info-value">50 min · €19–28</div>
+        <div class="info-value">50 min · €19–28 (~$21–31)</div>
       </div>
       <div class="info-item">
         <div class="info-label">Train to Pompeii</div>
-        <div class="info-value">35 min · €3.10</div>
+        <div class="info-value">35 min · €3.10 (~$3.40)</div>
       </div>
       <div class="info-item">
         <div class="info-label">Currency</div>
@@ -1260,14 +1280,14 @@
           <p class="option-desc">Stunning island with dramatic limestone cliffs, the famous Blue Grotto sea cave, the
             village of Anacapri, and the Mount Solaro chairlift with panoramic views over the Tyrrhenian Sea. Glamorous
             and beautiful — also crowded, expensive, and logistically demanding on a day trip. Hydrofoil from Molo
-            Beverello (~1km from cruise terminal): 50–65 min, €19–28 each way.</p>
+            Beverello (~1km from cruise terminal): 50–65 min, €19–28 (~$21–31) each way.</p>
           <p class="option-verdict">Best for: people who've always wanted to see Capri, or who'd rather have scenery and
             glamour over history. Commit to an early departure (7:30–8am ferry). <strong>Critical:</strong> last
             reliable ferry back is ~5–5:30pm. Do not miss it.</p>
         </div>
       </div>
 
-      <div class="option">
+      <div class="option recommended">
         <img class="option-img"
           src="https://commons.wikimedia.org/wiki/Special:FilePath/Fortuna_Street,_Pompeii,_Italy_LOC_4754574859.jpg?width=700"
           alt="Pompeii ruins, Italy" onerror="this.style.display='none'">
@@ -1277,8 +1297,8 @@
           <div class="option-time">⏱ 4–5 hrs total · Morning</div>
           <p class="option-desc">One of the most extraordinary archaeological sites in the world — an entire Roman city
             frozen in 79 AD. The Forum, the 25,000-seat amphitheater, the brothel with preserved frescoes, the garden
-            houses. Entry €18. Circumvesuviana train from Napoli Piazza Garibaldi: 35 min, €3.10 each way. Trains run
-            every 30–40 min from about 7am.</p>
+            houses. Entry €18 (~$20). Circumvesuviana train from Napoli Piazza Garibaldi: 35 min, €3.10 (~$3.40) each
+            way. Trains run every 30–40 min from about 7am.</p>
           <p class="option-verdict">Best for: history and scale. This is the "wow" day for most people who do it.
             Pre-book tickets at pompeiisites.org to skip the 30–45 min queue. Can be combined with Naples city in the
             afternoon.</p>
@@ -1295,8 +1315,8 @@
           <div class="option-time">⏱ 3–4 hrs · Flexible</div>
           <p class="option-desc">The real deal — chaotic, dense, alive. Spaccanapoli street bisects the historic center;
             side streets lead to Baroque churches, street food markets, and the Sansevero Chapel (Baroque sculpture
-            including the astonishing "Veiled Christ" statue — €8, must pre-book). The Museo Archaeologico Nazionale
-            holds the world's best Pompeii artifact collection (€15, 1.5 hrs).</p>
+            including the astonishing "Veiled Christ" statue — €8 (~$9), must pre-book). The Museo Archaeologico
+            Nazionale holds the world's best Pompeii artifact collection (€15 (~$17), 1.5 hrs).</p>
           <p class="option-verdict">Best for: people who want authentic urban Italy, not a theme park. Easiest to
             combine with Pompeii (train + walk back to port). Not for people who want a relaxing day — Naples is
             stimulating in both good and challenging ways.</p>
@@ -1318,16 +1338,16 @@
           <div class="option-title">Blue Grotto (Grotta Azzurra)</div>
           <div class="option-time">⏱ 1–1.5 hrs in Capri · Morning only</div>
           <p class="option-desc">Famous sea cave where sunlight enters through an underwater opening and turns the water
-            electric blue. Boats go in one at a time lying flat. Ticket includes small rowboat into the cave (~€15).
-            Waits can be 45–60 min long, and the cave closes when seas are rough. Best visited in the morning when light
-            is optimal and lines shorter.</p>
+            electric blue. Boats go in one at a time lying flat. Ticket includes small rowboat into the cave (~€15
+            (~$17)). Waits can be 45–60 min long, and the cave closes when seas are rough. Best visited in the morning
+            when light is optimal and lines shorter.</p>
           <p class="option-verdict">Worth doing if it's open and you arrive early. Can't be guaranteed — weather and
             crowd conditions vary. If the wait is over an hour, consider skipping it and using time on the island
             instead.</p>
         </div>
       </div>
 
-      <div class="option">
+      <div class="option recommended">
         <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Immagine_d%27insieme_2,_Cappella_Sansevero.jpg?width=700"
@@ -1337,14 +1357,14 @@
           <div class="option-time">⏱ 45 min · Pre-book required</div>
           <p class="option-desc">Small Baroque chapel containing the "Veiled Christ" — a marble sculpture of such
             technical improbability that people have assumed it must be real fabric. One of the most extraordinary
-            things you can see in Italy. Entry €8. Tiny space with limited daily capacity: book at cappellaansevero.it
-            at least a week ahead.</p>
+            things you can see in Italy. Entry €8 (~$9). Tiny space with limited daily capacity: book at
+            cappellaansevero.it at least a week ahead.</p>
           <p class="option-verdict">Do not skip this if you're doing Naples. It takes 45 minutes and it will be the
             thing people talk about afterward. Just book it now.</p>
         </div>
       </div>
 
-      <div class="option">
+      <div class="option recommended">
         <div class="option-body option-body--no-img">
           <img class="option-img"
             src="https://commons.wikimedia.org/wiki/Special:FilePath/Punch_Neapolitan_Pizza_Margherita.jpg?width=700"
@@ -1353,9 +1373,9 @@
           <div class="option-title">Eat Real Neapolitan Pizza</div>
           <div class="option-time">⏱ 45 min · Lunch</div>
           <p class="option-desc">Not optional if you're in Naples. L'Antica Pizzeria da Michele (Via Cesare Sersale 1) —
-            only Margherita and Marinara, cash only, a queue that moves fast, €5–6 a pizza. Pizzeria Di Matteo (Via dei
-            Tribunali 94) — equally good, slightly more variety, same price. Naples pizza is categorically different
-            from everywhere else.</p>
+            only Margherita and Marinara, cash only, a queue that moves fast, €5–6 (~$6–7) a pizza. Pizzeria Di Matteo
+            (Via dei Tribunali 94) — equally good, slightly more variety, same price. Naples pizza is categorically
+            different from everywhere else.</p>
           <p class="option-verdict">Even if you're doing Capri, consider a 45-min detour to eat pizza before boarding
             the ferry. The port to Da Michele is 15 min on foot.</p>
         </div>
@@ -1371,7 +1391,7 @@
           <div class="option-time">⏱ 1.5–2 hrs</div>
           <p class="option-desc">The world's best collection of Pompeian artifacts — the original mosaics, sculpture,
             jewelry, and frescoes rescued from the ruins. If you're going to Pompeii, this puts everything in context.
-            If you're not going to Pompeii, this is a worthy standalone. Entry €15.</p>
+            If you're not going to Pompeii, this is a worthy standalone. Entry €15 (~$17).</p>
           <p class="option-verdict">Best as a Pompeii companion — do the ruins, then the museum. Together they make one
             exceptional history day.</p>
         </div>
@@ -1427,7 +1447,8 @@
       <div class="callout-label">Watch Out</div>
       Naples cruise terminal taxis have a history of overcharging tourists. Use only white licensed cabs with a running
       meter, or agree the fixed city fare (tariffe predeterminate) before getting in. The fare to Piazza Garibaldi
-      (train station) should be €6–12. Anyone offering unofficial "transport" at the port exit — decline and walk.
+      (train station) should be €6–12 (~$7–13). Anyone offering unofficial "transport" at the port exit — decline and
+      walk.
     </div>
   </div>
 
